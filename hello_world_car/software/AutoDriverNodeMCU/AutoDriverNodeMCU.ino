@@ -1,7 +1,7 @@
 #include <ESP8266WiFi.h>
 
 const char *ssid = "Autic";
-const char *password = "espap";
+const char *password = "espap123";
 
 String html_code = "HTTP/1.1 200 OK\n\
 Content-type:text/html\n\

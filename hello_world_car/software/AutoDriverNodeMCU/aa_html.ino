@@ -1,13 +1,13 @@
 # include <Servo.h>
 
 #define servo_pin D4
-#define brzina_naprijed D2
-#define brzina_nazad D3
-#define rikverc D8
-#define stop_svjetlo D5
+#define brzina_naprijed D7
+#define brzina_nazad D8
+#define rikverc D3
+#define stop_svjetlo D2
 #define farovi D1
 #define zmigavac_l D6
-#define zmigavac_d D7
+#define zmigavac_d D5
 int old_brzina = 0;
 int zmigavac_speed = 500;
 int old_volan_stupanj = 90;
@@ -83,6 +83,7 @@ void send_brzina(int pin, int brzina) {
   } else {
     analogWrite(pin, brzina * 113);
   }
+  Serial.println(brzina * 113);
 }
 
 void brzina(int brzina) {
